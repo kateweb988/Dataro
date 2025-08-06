@@ -1,0 +1,604 @@
+@media screen and (max-width: 1600px)
+   .info__box
+      margin-left: 0
+   .nav__list li a
+      font-size: 17px
+   .nav__logo
+      width: 220px
+   .container
+      max-width: 1196px
+   .nav__socials a:first-child
+      width: 31px 
+      max-width: 31px
+   .nav__socials a:nth-child(2)
+      width: 43px
+      max-width: 43px
+   .nav__list li
+      margin-right: 50px
+   .header__wrap h1
+      font-size: 30px
+      margin-bottom: 30px
+   .header__text
+      font-size: 20px
+      margin-bottom: 34px
+   .header__sub
+      font-size: 20px
+      width: 100%
+      max-width: 1000px
+   .header
+      padding-bottom: 49px
+   .tabs__nav a
+      font-size: 18px
+      height: 50px
+   .main__item label
+      font-size: 18px
+   .main__form
+      max-width: 281px
+   .custom-checkbox + label
+      font-size: 18px !important
+      width: 40px !important
+      height: 40px !important
+   .main__item input
+      height: 40px
+      font-size: 18px
+   .main__form button
+      height: 40px
+      font-size: 18px
+   .header__wrap
+      padding-top: 180px
+   .main 
+      .tabs__nav
+         margin-bottom: 17px
+   .main__item label
+      margin-bottom: 3px
+   .main__flex
+      margin: 18px 0 28px
+   .main__check
+      margin-left: 11px
+   .main__el:first-child
+      margin-right: 11px
+   .info__box
+      img 
+         width: 270px
+   .info__content p
+      font-size: 25px
+      margin-bottom: 40px
+   .info__content span
+      font-size: 21px
+   .info
+      padding: 20px 0 80px
+   .text
+      padding: 80px 0
+   .text__content p
+      font-size: 21px
+   .text__content
+      max-width: 53.35%
+   .music__box
+      margin-left: 0
+      img 
+         width: 530px
+   .header__fig2 
+      right: -216px
+      top: 200px
+      width: 231px
+      z-index: -1
+   .header__fig1 
+      left: -220px
+      top: 200px
+      width: 229px
+   .music__content h2
+      font-size: 40px
+      margin-bottom: 60px
+   .music__content p
+      font-size: 21px
+      margin-bottom: 25px
+   .music__content
+      left: 0
+      max-width: 47.35%
+   .music
+      padding: 50px 0 20px
+   .order__box p
+      font-size: 19px
+      margin-bottom: 30px
+   .order .tabs__nav
+      max-width: 280px
+   .order__box
+      max-width: 715px
+      padding: 40px
+   .order .tabs__nav a
+      margin-bottom: 20px
+   .order .header__fig1
+      width: 294px
+   .order .header__fig2
+      width: 284px
+      bottom: 0 
+      top: inherit
+   .footer
+      padding: 57px 0
+   .main__num
+      margin-right: 90px
+      img 
+         width: 280px
+   .main__num span
+      font-size: 90px
+      margin-top: -50px
+      margin-left: -20px
+   .main .day-message_2 .main__num span
+      margin-left: -28px
+   .main__right h2
+      font-size: 40px
+      margin-bottom: 37px
+   .main__right p
+      font-size: 20px 
+   .main .day-message
+      margin-top: 70px
+   .main__top
+      margin-bottom: 30px
+   .main__block
+      font-size: 25px
+      margin-bottom: 25px
+      padding: 15px 25px
+   .main__text p
+      font-size: 20px
+   .main__area
+      margin-bottom: 40px
+   .main__area ul li
+      font-size: 20px
+   .main__ul
+      margin-bottom: 25px
+   .footer .nav__socials
+      margin-left: 68px
+// @media screen and (max-width: 1350px)
+@media screen and (max-width: 1199px)
+   .container 
+       max-width: 960px !important
+   .menu-btn, .menu
+      display: block
+   .header__wrap
+      padding-top: 120px
+   .menu-btn 
+      width: 25px
+      height: 24px
+      position: fixed
+      right: inherit 
+      left: initial
+      top: 50px
+      z-index: 11
+      overflow: hidden
+      background: url(/img/bur1.svg) no-repeat center center
+      &.active 
+         background: url(/img/bur2.png) no-repeat center center
+         left: 39px
+         right: inherit
+         top: 25px
+         position: fixed
+         z-index: 200000
+   .menu-btn span 
+      width: 38px
+      height: 2px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background-color: white
+      transition: all 0.5s
+      margin-left: 5px
+      display: none
+   .menu-btn span:nth-of-type(2) 
+      top: calc(50% - 8.5px)
+      width: 48px
+      height: 2px
+      margin-left: 0
+   .menu-btn span:nth-of-type(3) 
+      top: calc(50% + 9.4px)
+      width: 24px
+      height: 2px
+      margin-left: 12px
+   .menu 
+      position: fixed
+      top: 0
+      left: 0
+      width: 50%
+      height: 100%
+      padding: 80px 40px 0
+      background: white
+      transform: translateX(-100%)
+      transition: transform 0.5s
+      z-index: 10
+      overflow: hidden
+      &.active 
+         transform: translateX(0%)
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35)
+      .nav__list 
+         display: block
+         li 
+            margin-bottom: 25px
+            margin-right: 0
+            a 
+               font-size: 14px
+               br 
+                  display: none
+   .menu-btn.active span:nth-of-type(1) 
+      display: none
+   .menu-btn.active span:nth-of-type(2) 
+      top: 50%
+      width: 24px
+      transform: translate(-50%, 0%) rotate(45deg)
+   .menu-btn.active span:nth-of-type(3) 
+      width: 24px
+      top: 50%
+      transform: translate(-50%, 0%) rotate(-44deg)
+   .nav__list
+      display: none
+   .header__text, .header__sub
+      font-size: 19px
+   .main__form
+      max-width: 275px
+   .main__right h2
+      font-size: 32px
+   .music__box img
+      width: 420px
+   .music__content
+      max-width: 50%
+   .music__content p
+      font-size: 18px
+   .music__content h2
+      font-size: 30px
+      margin-bottom: 30px
+   .footer 
+      .nav__list
+         display: flex
+      .nav__box
+         flex-direction: column
+      .nav__logo
+         margin-bottom: 40px
+   .footer .nav__socials
+      margin-left: 0
+   .footer__flex
+      justify-content: space-between
+      width: 100%
+   .nav__box 
+      position: relative
+   .nav
+      .nav__logo
+         position: absolute
+         top: -10px
+         right: 50%
+         margin-right: -110px
+   .nav__box
+      .nav__socials
+         margin-left: auto
+   .main-nav
+      z-index: 9
+@media ( max-width: 991px )
+   input, textarea, select
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+   .container 
+      max-width: 720px !important
+      padding: 0 10px
+   .nav
+      padding: 20px 0
+   .nav .nav__logo
+      width: 140px
+      top: 0
+      margin-right: -70px
+   .nav__socials a:first-child
+      width: 15px
+      max-width: 15px
+   .nav__socials a:nth-child(2) 
+      width: 22px
+      max-width: 22px
+      margin-left: 13px
+   .header__wrap h1
+      font-size: 23px
+   .header__text, .header__sub
+      font-size: 14px
+   .padding__wrap
+      margin-top: 110px
+      h1 
+         margin-bottom: 23px
+   .menu-btn
+      top: 30px
+   .header__text
+      margin-bottom: 20px
+   .header
+      padding-bottom: 26px
+   .tabs__nav a
+      height: 41px
+      font-size: 13px
+   .main__form
+      max-width: 171px
+   .main__item label
+      font-size: 13px
+   .main__item input
+      font-size: 13px
+      height: 31px
+   .custom-checkbox + label
+      width: 30px !important
+      height: 30px !important
+      font-size: 13px !important
+   .main__el:first-child
+      margin-right: 3px
+   .main__check
+      margin-left: 3px
+   .main__flex
+      margin: 11px 0 13px
+   .header__fig1, .header__fig2 
+      display: none
+   .main__num img
+      width: 170px
+   .main__num span
+      font-size: 50px
+      margin-top: -28px
+      margin-left: -12px
+   .main__right h2
+      font-size: 24px
+      margin-bottom: 27px
+   .main__right p
+      font-size: 13px
+   .main__num
+      margin-right: 70px
+   .main__block
+      font-size: 15px
+      padding: 8px 15px
+      margin-bottom: 15px
+   .main__text p
+      font-size: 13px
+      margin-bottom: 20px
+   .main__area
+      margin-bottom: 28px
+   .main__area ul li
+      font-size: 13px
+      margin-bottom: 10px
+   .main__ul
+      margin-bottom: 15px
+   .info__box img
+      width: 170px
+   .info__content p
+      font-size: 14px
+      margin-bottom: 30px
+   .info__content span
+      font-size: 13px
+   .info
+      padding: 0 0 50px
+   .text
+      padding: 40px 0
+   .text__content p
+      font-size: 13px
+      margin-bottom: 20px
+   .music__content
+      margin-top: 20px
+      max-width: 52%
+   .music__box img
+      width: 300px
+   .music__content h2
+      font-size: 22px
+   .music__content p
+      font-size: 13px
+      margin-bottom: 20px
+   .music
+      padding-bottom: 0
+   .order__box
+      padding: 25px
+      max-width: 519px
+   .order__box p
+      font-size: 14px
+      margin-bottom: 20px
+   .order .tabs__nav
+      margin-top: 10px
+      max-width: 233px
+   .order .tabs__nav a
+      margin-bottom: 10px
+   .main__form button
+      height: 31px
+      font-size: 13px
+   .footer .nav__logo
+      width: 140px
+      margin-bottom: 30px
+   .footer
+      padding: 40px 0 30px
+      .nav__list li a
+         font-size: 13px
+   .main .day-message_2 .main__num span 
+      margin-left: -14px
+@media screen and (max-width: 767px)
+   .container 
+      max-width: 540px !important
+   .tabs__nav a
+      font-size: 11px
+   .info__content
+      max-width: 62%
+   .music__box img
+      width: 230px
+   .footer .nav__list
+      li
+         margin-right: 25px
+         a
+            font-size: 11px
+   .main .tabs__pane:nth-child(4) 
+      margin-left: calc(67.1%)
+@media screen and (max-width: 576px)
+   button:active, button:focus 
+      outline: none
+   button::-moz-focus-inner 
+      border: 0
+   a:active, a:focus
+      outline: none
+   input, textarea
+      outline: none
+   input:active, textarea:active
+      outline: none
+   input:focusout
+      outline: none
+   .mm 
+      flex-direction: column 
+      align-items: center
+      justify-content: center
+      li 
+         margin-bottom: 40px !important
+         width: 100% !important
+         margin-top: 0 !important
+   .mob 
+      display: block !important
+   .nav .nav__logo
+      margin-right: 0
+      position: relative
+      right: 0
+      top: 0
+   .menu-btn
+      top: 32px
+      background-size: 100% !important
+      width: 20px
+      right: 19px
+   .container
+      padding: 0 22px
+   .nav .nav__box
+      padding-right: 35px
+   .menu
+      height: max-content
+      top: 75px
+      left: 0
+      transform: translateX(-120%)
+      width: 100%
+      padding: 53px 40px
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25) !important
+      padding-top: 20px
+      padding-bottom: 30px
+      .nav__socials
+         justify-content: center
+   .menu .nav__list li
+      text-align: center
+      margin-bottom: 15px
+   .menu .nav__list li a
+      font-size: 13px
+   .menu-btn.active 
+      left: inherit
+      right: 19px
+      top: 31px
+      width: 17px
+   .header__wrap h1
+      font-size: 20px
+      margin-bottom: 25px
+   .main .tabs__nav
+      flex-direction: column 
+      a 
+         width: 100%
+         margin-bottom: 11px
+         font-size: 13px
+   .main__form
+      max-width: 100%
+   .main__check
+      margin-left: 18px
+   .main__el:first-child
+      margin-right: 10px
+   .main__top
+      flex-direction: column 
+      align-items: center
+      margin-bottom: 20px
+   .main__num
+      margin-right: 0
+      margin-bottom: 10px
+   .main__right h2
+      font-size: 20px
+      margin-bottom: 17px
+      text-align: center
+   .main__right p
+      text-align: center
+   .main__block
+      text-align: center
+   .main__text p, .main__area ul li
+      text-align: center
+   .info__box
+      flex-direction: column 
+      align-items: center
+   .info__content
+      max-width: 100% 
+      margin-top: 15px
+      text-align: center
+   .info__content p
+      margin-bottom: 20px  
+   .text__content
+      max-width: 100%
+   .text
+      padding: 30px 0
+   .text__content p
+      text-align: center
+   .text__bg
+      object-position: 0px 0px
+   .main .day-message
+      margin-top: 50px
+   .music
+      padding: 30px 0 20px
+   .music__box
+      flex-direction: column
+   .music__content
+      max-width: 100%
+   .music__content h2
+      font-size: 20px
+      text-align: center
+      margin-bottom: 18px
+   .music__content p
+      margin-bottom: 15px
+      text-align: center
+   .order
+      padding-top: 25px
+   .order__box p
+      font-size: 13px
+      margin-bottom: 15px
+      br 
+         display: none
+   .order__flex
+      padding: 0
+      flex-direction: column
+   .order .tabs__nav
+      margin-bottom: 15px
+   .tabs__nav a
+      font-size: 13px
+      &:last-child
+         margin-bottom: 0
+   .footer__flex
+      flex-direction: column 
+      align-items: center
+   .footer .nav__list
+      flex-direction: column 
+      text-align: center
+      li 
+         margin-right: 0
+         margin-bottom: 15px
+         a 
+            font-size: 13px
+            br 
+               display: none
+         &:last-child
+            margin-bottom: 0
+   .footer .nav__logo
+      align-self: flex-start
+   .footer 
+      .container 
+         position: relative
+      .nav__box .nav__socials
+         position: absolute
+         right: 0
+         top: 2px
+   .br 
+      display: block !important
+   .order .tabs__nav
+      max-width: 100%
+   .tabs__pane_show
+      width: 100%
+   .tabs__content
+      width: 100%
+   .main 
+      padding-bottom: 30px
+      .custom-checkbox + label
+         padding-top: 2px
+   .header__wrap
+      padding-top: 100px
+   .main-nav
+      box-shadow: none !important
+      background: white !important
+   .main .tabs__pane
+      margin-left: 0 !important
+      

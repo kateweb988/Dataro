@@ -1,0 +1,671 @@
+input::-webkit-input-placeholder 
+   color: rgba(82, 86, 83, 0.4) !important
+input::-moz-placeholder
+   color: rgba(82, 86, 83, 0.4) !important
+input:-ms-input-placeholder 
+   color: rgba(82, 86, 83, 0.4) !important
+input:-moz-placeholder 
+   color: rgba(82, 86, 83, 0.4) !important
+.menu-btn, .menu
+   display: none
+.menu-btn, .menu
+   display: none
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+   display: none
+.custom-checkbox 
+   position: absolute
+   z-index: -1
+   opacity: 0
+.custom-checkbox+label 
+   display: flex
+   align-items: center
+   user-select: none
+   font-weight: 400
+   font-size: 16px
+   line-height: 130%
+   color: #494949
+   cursor: pointer
+   &:hover
+      &:before 
+         border: 1px solid $brown
+.custom-checkbox+label::before
+   content: ''
+   display: inline-block
+   flex-shrink: 0
+   display: flex
+   flex-grow: 0
+   background-repeat: no-repeat
+   background-position: center center
+   background-size: 8px
+   background: #FFFFFF
+   flex: 1 0 auto
+   transition: 0.2s
+   width: 20px
+   height: 20px
+   border-radius: 5px
+   border: 1px solid #e9e9e9
+   background-color: #ffffff
+   max-width: 20px
+   margin-right: 11px
+.custom-checkbox:checked+label::before 
+   background: url(/img/check2.png) no-repeat center center
+   background-size: 8px
+.swiper-pagination
+   display: flex
+   justify-content: center
+   bottom: 19px
+   position: absolute
+   z-index: 2
+.swiper-pagination-bullet
+   width: 52px
+   height: 2px
+   background-color: #ffffff
+   opacity: 0.2
+.swiper-pagination-bullet-active
+   background-color: $brown !important
+   opacity: 1
+.tabs__pane 
+   display: none
+.tabs__pane_show 
+   display: block
+.tabs__btn_active
+   color: #20252d !important
+   position: relative
+.swiper-button-next, .swiper-button-prev
+   z-index: 9
+.swiper-button-disabled
+   opacity: 0
+   pointer-events: none
+.bread 
+   display: flex
+   align-items: center
+   justify-content: flex-start
+   margin-bottom: 28px
+   flex-wrap: wrap
+   a 
+      color: rgba(32, 32, 32, 0.5)
+      font-size: 14px
+      font-weight: 500
+      line-height: 18px
+      &:after 
+         content: "/"
+         display: inline-block
+         color: rgba(32, 32, 32, 0.5) !important
+         font-size: 14px
+         font-weight: 500
+         line-height: 18px
+         margin: 0 10px
+      &:last-child
+         color: rgb(32, 32, 32)
+         &:after 
+            display: none
+      &:hover 
+         color: $brown
+.mob 
+   display: none
+/* SELECT */
+.selectCF
+   margin: 0
+   padding: 0
+   display: inline-block
+   position: relative
+   color: black
+   display: flex
+   align-items: center
+   justify-content: center
+   transition: 0.5s
+   width: max-content
+   height: auto
+   background: transparent
+.selectCF li
+   list-style: none
+   cursor: pointer
+   perspective: 900px
+   -webkit-perspective: 900px
+   text-align: left
+   width: 100%
+   height: 100%
+   max-height: 100%
+   box-sizing: border-box
+.selectCF > li
+   position: relative
+   border: none
+.selectCF span
+   display: flex
+   height: auto
+   line-height: 100%
+   color: #888888
+   z-index: 1
+   align-items: center
+.selectCF .arrowCF
+   transition: .3s
+   -webkit-transition: .3s
+   width: 7px
+   height: 5px
+   text-align: center
+   vertical-align: top
+   background: url(/img/down-arrow.png) no-repeat !important
+   position: absolute
+   right: -16px
+   top: 8px
+.selectCF .titleCF
+   font-size: 16px
+   font-weight: 400
+   text-overflow: ellipsis
+   color: #000000 !important
+   white-space: nowrap
+   width: max-content !important
+   height: max-content !important
+   box-sizing: border-box
+   background: transparent !important
+.selectCF .searchCF
+   position: absolute
+   top: 3px
+   right: 0
+   z-index: -1
+@keyframes searchActive 
+   from
+      transform: rotateY(180deg) 
+   to
+      transform: rotateY(0deg)
+@-moz-keyframes searchActive 
+   from
+      transform: rotateY(180deg) 
+   to
+      transform: rotateY(0deg)
+@-webkit-keyframes searchActive 
+   from
+      -webkit-transform: rotateY(180deg) 
+   to
+      -webkit-transform: rotateY(0deg)
+.searchActive .searchCF
+   z-index: 1
+   animation: searchActive 0.3s alternate 1
+   -moz-animation: searchActive 0.3s alternate 1
+   -webkit-animation: searchActive 0.3s alternate 1
+.searchActive .titleCF
+   opacity: 0
+.selectCF .searchCF input
+   border: none !important
+   padding: 0
+   margin: 0
+   width: auto
+   height: auto
+   background: transparent
+.selectCF .searchCF input:active, .selectCF .searchCF input:focus
+   box-shadow: none !important
+   border: none !important
+   outline: none !important
+.selectCF li ul
+   display: none
+   position: absolute
+   top: 100%
+   left: 1px
+   width: 100%
+   background: grey
+   max-height: 255px
+   overflow-y: auto
+   transition: .2s
+   -webkit-transition: .2s
+   z-index: 2
+   box-sizing: border-box
+   padding-bottom: 10px
+   border-top: none
+.selectCF li ul li
+   padding: 9px 0 9px 10px
+   transition: .2s
+   -webkit-transition: .2s
+   overflow: hidden
+   text-overflow: ellipsis
+   white-space: nowrap
+   border-top: none
+   box-sizing: border-box
+   height: 40px
+   font-weight: 500
+   font-size: 16px
+   line-height: 22px
+   color: #FAFAFF
+   &:last-child
+      border-radius: 0px 0px 5px 5px
+      padding-bottom: 10px
+   &:hover 
+      color: $brown
+.onCF .arrowCF
+   transform: rotate(180deg)
+   -webkit-transform: rotate(180deg)
+@-moz-keyframes effect1 
+   from
+      transform: translateY(15px)
+      opacity: 0
+   to
+      transform: translateY(0px)
+      opacity: s1
+@-webkit-keyframes effect1 
+   from
+      -webkit-transform: translateY(15px) 
+      opacity: 0
+   to
+      -webkit-transform: translateY(0px)
+      opacity: 1
+.onCF li ul
+   display: block
+   position: absolute
+   -moz-animation: effect1 0.3s alternate 1
+   -webkit-animation: effect1 0.3s alternate 1
+   left: -6.55px
+   top: 22px
+   border-radius: 0 0 4px 4px
+   width: 100%
+   min-width: max-content
+   padding-right: 10px
+.header 
+   padding-bottom: 68px
+   &__fig1
+      position: absolute
+      left: -295px
+      top: 231px
+      width: 313px
+   &__fig2
+      position: absolute
+      right: -306px
+      top: 250px
+      width: 339px
+   &__wrap 
+      position: relative
+      padding-top: 220px
+      h1 
+         margin-bottom: 51px
+   &__text 
+      font-size: 27px
+      line-height: 1.19
+      text-align: center
+      color: #525653
+      margin-bottom: 48px
+   &__sub 
+      font-size: 27px
+      font-weight: bold
+      line-height: 1.3
+      text-align: center
+      color: #a68052
+      width: 100%
+      max-width: 1350px
+      margin: 0 auto
+.nav 
+   padding: 35px 0
+   &__logo 
+      display: flex
+      align-items: center
+      justify-content: center
+      img 
+         width: 100%
+         object-fit: contain
+         height: auto
+   &__list 
+      flex-wrap: wrap 
+      align-items: center
+      li 
+         margin-right: 70px
+         &:last-child
+            margin-right: 0
+         a 
+            font-size: 24px
+            font-weight: bold
+            line-height: 0.78
+            color: #525653
+         &:hover 
+            a 
+               color: #A68052
+   &__box 
+      align-items: center
+      justify-content: space-between
+   &__socials 
+      a 
+         display: flex
+         align-items: center
+         justify-content: center
+         flex: 1 0 auto
+         height: 43px
+         transform: scale(1)
+         &:first-child
+            max-width: 43px 
+            width: 43px
+         &:nth-child(2)
+            max-width: 61px 
+            width: 61px
+            margin-left: 27px
+         &:hover 
+            transform: scale(1.15)
+label.error 
+   display: none !important
+input.error 
+   border: 2.5px solid #ff0000 !important
+.main 
+   padding-bottom: 50px
+   &__form 
+      width: 100%
+      max-width: 391px 
+      button 
+         width: 100%
+         background: white 
+         border: 2.5px solid $brown
+         &:hover 
+            background: $brown
+            color: white
+   &__item 
+      width: 100%
+      label 
+         display: block
+         font-size: 25px
+         line-height: 100%
+         text-align: center
+         color: #525653
+         margin-bottom: 7px
+      input 
+         width: 100%
+         height: 52px
+         text-align: center
+         border: 2.5px solid #535653
+         font-size: 25px
+         &:focus 
+            border: 2.5px solid $brown
+   &__flex 
+      margin: 27px 0 40px
+      align-items: flex-end
+   &__check
+      margin-left: 20px
+   &__el 
+      &:first-child
+         margin-right: 16px
+   &__top 
+      align-items: center
+      margin-bottom: 40px
+   &__num 
+      margin-right: 100px
+      position: relative
+      span 
+         position: absolute
+         top: 50%
+         left: 50%
+         font-size: 125px
+         font-weight: bold
+         line-height: 100%
+         text-align: center
+         color: #525653
+         margin-top: -68px
+         margin-left: -26px
+   .day-message
+      background: transparent
+      margin: 100px 0 0
+      border: none 
+      padding: 0
+      &_2
+         .main__num span
+            margin-left: -38px
+   &__area 
+      margin-bottom: 60px
+      &:last-child
+         margin-bottom: 0
+      ul 
+         li 
+            font-size: 27px
+            line-height: 1.11
+            text-align: left
+            color: #525653
+            font-weight: 400
+            margin-bottom: 15px
+            &:last-child
+               margin-bottom: 0
+   &__block 
+      width: 100%
+      padding: 20px 37px 
+      background-color: #ede5df
+      margin-bottom: 30px
+      font-size: 35px
+      font-weight: bold
+      line-height: 1.2
+      color: #525653
+   &__ul 
+      margin-bottom: 35px
+   &__text 
+      p 
+         font-size: 27px
+         line-height: 1.11
+         text-align: left
+         color: #525653
+         font-weight: 400
+         margin-bottom: 25px
+         &:last-child
+            margin-bottom: 0
+   &__right 
+      h2 
+         font-size: 56px
+         line-height: 1.32
+         font-weight: 400
+         text-transform: uppercase
+         margin-bottom: 40px
+         span
+            font-weight: bold
+            color: #a68052
+            text-transform: uppercase
+      p 
+         font-size: 27px
+         font-weight: 400
+         line-height: 1.11
+         color: #525653
+.tabs__nav
+   justify-content: space-between
+   flex-wrap: wrap
+   margin-bottom: 23px
+   a 
+      background: rgba(82, 86, 83, 0.2)
+      width: 24%
+      height: 71px
+      font-size: 25px
+      line-height: 1
+      text-align: center
+      color: #525653
+      display: flex
+      align-items: center
+      justify-content: center
+      &:hover 
+         background: $brown
+         color: white
+   .tabs__btn_active
+      background-color: #08392a !important
+      color: white !important
+.custom-checkbox + label
+   width: 57px
+   height: 57px
+   display: flex
+   border: 2.5px solid #535653
+   align-items: center
+   justify-content: center
+   font-size: 25px
+   letter-spacing: 1px
+   text-align: center
+   color: #525653
+   transition: 0.5s
+   box-sizing: border-box
+   &::before
+      display: none
+   &:hover 
+      background: $brown !important
+      color: white !important
+      border: 2.5px solid $brown
+.custom-checkbox:checked + label
+   background: $brown !important
+   color: white !important
+   border: 2.5px solid $brown
+.info 
+   padding: 39px 0 89px
+   &__box 
+      align-items: center
+      justify-content: space-between
+      margin-left: -34px
+   &__content 
+      width: 100%
+      max-width: 66.61% 
+      p 
+         margin-bottom: 60px
+         font-size: 35px
+         font-weight: bold
+         line-height: 1.2
+         color: #525653
+      span 
+         font-size: 29px
+         line-height: 1.1
+         color: #525653
+.text 
+   padding: 112px 0
+   position: relative
+   &__bg 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover 
+      z-index: -1
+   &__content 
+      width: 100%
+      max-width: 52.35% 
+      p 
+         font-size: 29px
+         line-height: 1.28
+         color: #525653
+         margin-bottom: 30px
+         &:last-child
+            margin-bottom: 0
+.music 
+   padding: 100px 0 30px
+   &__box 
+      align-items: center
+      margin-left: -34px
+      justify-content: space-between
+   &__content 
+      width: 100%
+      max-width: 45.35% 
+      margin-top: 45px
+      position: relative
+      left: -18px
+      h2 
+         text-transform: uppercase
+         margin-bottom: 69px
+      p 
+         font-size: 29px
+         line-height: 1.28
+         color: #525653
+         margin-bottom: 30px
+         &:last-child
+            margin-bottom: 0
+.order 
+   padding-top: 50px
+   .header__fig2 
+      right: 2px
+      top: 117px
+      width: 428px
+      z-index: -1
+   .header__fig1 
+      left: 0px
+      top: 2px
+      width: 408px
+      z-index: -1
+   &__wrap 
+      position: relative
+   &__flex 
+      align-items: flex-start
+      justify-content: space-between
+      padding: 0 10px
+   .custom-checkbox + label
+      width: 57px
+      height: 57px
+      display: flex
+      border: 2.5px solid #535653
+      align-items: center
+      justify-content: center
+      font-size: 25px
+      letter-spacing: 1px
+      text-align: center
+      color: #525653
+      transition: 0.5s
+      box-sizing: border-box
+      &::before
+         display: none
+      &:hover 
+         background: $brown !important
+         color: white !important
+         border: 2.5px solid $brown
+   .custom-checkbox:checked + label
+      background: $brown !important
+      color: white !important
+      border: 2.5px solid $brown
+   &__box 
+      width: 100%
+      max-width: 1003px 
+      margin: 0 auto
+      padding: 60px
+      background-color: #ede5df
+      p 
+         font-size: 26px
+         font-weight: bold
+         line-height: 1.19
+         text-align: center
+         color: #a68052
+         margin-bottom: 40px
+   .tabs__nav
+      width: 100%
+      max-width: 390px 
+      margin-top: 20px
+      a 
+         width: 100%
+         margin-bottom: 28px
+         background-color: #fff
+         &:hover 
+            background: $brown
+            color: white
+         &:last-child
+            margin-bottom: 0
+   .main__form 
+      input, button
+         background: transparent
+      button 
+         &:hover 
+            background: $brown
+.footer
+   padding: 80px 0
+   &__logo 
+      width: 300px
+   &__flex 
+      align-items: center
+   .nav__socials 
+      margin-left: 100px
+.day-messages 
+   margin-top: 20px
+.day-message 
+   display: none
+   font-weight: bold
+   color: #333
+   padding: 10px
+   border: 1px solid #ccc
+   border-radius: 5px
+   background: #f9f9f9
+.main-nav 
+   position: fixed
+   width: 100%
+   transition: all 0.3s ease
+   z-index: 1000
+.main-nav.fixed 
+   position: fixed
+   top: 0
+   left: 0
+   background: rgba(255, 255, 255, 0.7)
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
+   backdrop-filter: blur(6px)
+.main 
+   .tabs__pane
+      &:nth-child(2)
+         margin-left: calc(25.5%)
+      &:nth-child(3)
+         margin-left: calc(50.7%)
+      &:nth-child(4)
+         margin-left: calc(76.1%)
