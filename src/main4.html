@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+	<title>DATARO</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- Favicon -->
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+	<!-- OG -->
+	<meta property="og:locale" content="ru-Ru">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<div class="body-wrap page">
+		<div class="menu">
+			<ul class="nav__list">
+				<li>
+					<a href="main.html">
+						Счастливое число <br>
+						на каждый день
+					</a>
+				</li>
+				<li>
+					<a href="main2.html">
+						Совместимость
+					</a>
+				</li>
+				<li>
+					<a href="main3.html">
+						Динамическая <br>
+						матрица судьбы
+					</a>
+				</li>
+				<li class="active">
+					<a href="main4.html">
+						Советы <br>
+						нумеролога
+					</a>
+				</li>
+			</ul>
+			<div class="nav__socials q">
+				<a href="https://www.instagram.com/dataro.destiny?igsh=MTFrOTc0bzNrcG83MQ==" target="_blank">
+					<img src="img/inst.svg" alt="">
+				</a>
+				<a href="https://youtube.com/@dataro-destiny?si=IsEwwJ70xllYLotr" target="_blank">
+					<img src="img/you.svg" alt="">
+				</a>
+			</div>
+		</div>
+		<div class="per">
+			<header class="header" id="header">
+				<nav class="nav main-nav">
+					<div class="container">
+						<div class="nav__box q">
+							<a href="main.html" class="nav__logo">
+								<img src="img/logo.svg" alt="">
+							</a>
+							<ul class="nav__list q">
+								<li>
+									<a href="main.html">
+										Счастливое число <br>
+										на каждый день
+									</a>
+								</li>
+								<li>
+									<a href="main2.html">
+										Совместимость
+									</a>
+								</li>
+								<li>
+									<a href="main3.html">
+										Динамическая <br>
+										матрица судьбы
+									</a>
+								</li>
+								<li class="active">
+									<a href="main4.html">
+										Советы <br>
+										нумеролога
+									</a>
+								</li>
+							</ul>
+							<div class="nav__socials q">
+								<a href="https://www.instagram.com/dataro.destiny?igsh=MTFrOTc0bzNrcG83MQ==" target="_blank">
+									<img src="img/inst.svg" alt="">
+								</a>
+								<a href="https://youtube.com/@dataro-destiny?si=IsEwwJ70xllYLotr" target="_blank">
+									<img src="img/you.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</nav>
+				<img src="img/bg2.png" alt="" class="main4__bg">
+
+				<div class="container">
+					<div class="header__wrap">
+						<div class="menu-btn"></div>
+						<div class="main4__box">
+							<h1>
+								СОветы нумеролога
+							</h1>
+							<p class="main4__sub">
+								Ежедневный прогноз — это ваш персональный настрой на успех, ясность и мудрость в каждом дне.
+							</p>
+							<p class="main4__text">
+								Ежедневный индивидуальный <br>
+								прогноз
+							</p>
+							<form action="success.php" class="main__form main__form_4 js-form" id="popupResult" method="post">
+								<div class="main__item">
+									<input type="text" name="tele" required="" placeholder="Укажите Ваш telegram"
+										class="order__input form__field">
+								</div>
+								<div class="main__flex q">
+									<div class="main__item">
+										<label>
+											Дата рождения
+										</label>
+										<input type="number" name="data" required="" class="order__input form__field"
+											placeholder="DD. MM. YYYY">
+									</div>
+									<div class="main__check q">
+										<div class="main__el">
+											<input class="form-check-input custom-checkbox" type="radio" name="gender" id="formm1"
+												value="Ж" checked>
+											<label class="form-check-label" for="formm1">
+												Ж
+											</label>
+										</div>
+										<div class="main__el">
+											<input class="form-check-input custom-checkbox" type="radio" name="gender" id="formm2"
+												value="М">
+											<label class="form-check-label" for="formm2">
+												М
+											</label>
+										</div>
+									</div>
+								</div>
+								<button class="main__button btn" data-submit>
+									Подписка на месяц
+									2500 ₸ / 409 ₽
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<section class="area" id="area">
+			<div class="container">
+				<p class="area__name">
+					Нумерологический прогноз помогает настроиться на ритм дня, понять, когда лучше действовать, а когда —
+					подождать, когда быть смелым, а когда — сохранять спокойствие.
+				</p>
+				<div class="area__text">
+					<p>
+						Цифры, стоящие за датой, не случайны. Они несут вибрации, влияющие на наше настроение, способности,
+						удачу и даже на то, как нас воспринимают окружающие. Ежедневный нумерологический прогноз — это как
+						личный компас, который помогает идти по жизни осознанно, использовать сильные стороны дня и быть
+						готовым к возможным трудностям.
+					</p>
+					<p>
+						Когда мы живем в согласии с энергиями дня, всё происходит легче: решения принимаются точнее, эмоции —
+						стабильнее, результаты — выше. Такой подход помогает не только достигать целей, но и сохранять
+						внутреннюю гармонию.
+					</p>
+				</div>
+				<p class="area__title">
+					Отменить подписку на ежедневневный индивидуальный прогноз
+				</p>
+				<form action="success.php" class="main__form main__form_5 js-form" id="popupResult" method="post">
+					<div class="main__flex q">
+						<div class="main__item">
+							<input type="text" name="tele" required="" placeholder="Укажите Ваш telegram"
+								class="order__input form__field">
+						</div>
+						<button class="main__button btn" data-submit>
+							Отменить подписку
+						</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="order" id="order">
+			<div class="container">
+				<div class="order__wrap">
+					<img src="img/fig1.svg" alt="" class="header__fig1">
+					<img src="img/fig2.svg" alt="" class="header__fig2">
+					<div class="order__box">
+						<p class="header__sub_1">
+							Счастливое число на каждый день раскрывает ваши таланты <br>
+							и жизненное предназначение, направляя к гармонии и успеху. <br class="br">
+							Узнайте его — и начните путь к себе уже сегодня!
+						</p>
+						<p class="header__sub_1">
+							Счастливое число на каждый день раскрывает ваши таланты и жизненное предназначение,
+							направляя к гармонии и успеху. Узнайте его — и начните путь к себе уже сегодня!
+						</p>
+						<p class="header__sub_2">
+							Узнайте свою совместимость с партнёром — это ключ к взаимопониманию, доверию и любви. <br>
+							Откройте секреты вашего союза уже сегодня!
+						</p>
+						<p class="header__sub_3">
+							Рассчитай матрицу своей судьбы, вдохновись магией чисел
+							и почувствуй свою уникальность и истинное прездназначение. <br>
+							И будь счастлив.
+						</p>
+						<p class="header__sub_4">
+							Узнайте свою совместимость с партнёром — это ключ к взаимопониманию, доверию и любви. <br>
+							Откройте секреты вашего союза уже сегодня!
+						</p>
+						<div class="order__flex q">
+							<div class="tabs__nav">
+								<a href="main.html" class="tabs__btn tabs__btn_active active">
+									Счастливое число <br>
+									на каждый день
+								</a>
+								<a href="main2.html" class="tabs__btn">
+									Совместимость
+								</a>
+								<a href="main3.html" class="tabs__btn">
+									Динамическая <br>
+									матрица судьбы
+								</a>
+								<a href="main4.html" class="tabs__btn">
+									Советы нумеролога
+								</a>
+							</div>
+							<div class="tabs__content">
+								<div class="tabs__pane tabs__pane_show">
+									<form action="success.php" class="main__form main__form_1 js-form" id="popupResult"
+										method="post">
+										<div class="main__item">
+											<label>
+												Имя
+											</label>
+											<input type="text" name="name" required="" class="order__input form__field">
+										</div>
+										<div class="main__flex q">
+											<div class="main__item">
+												<label>
+													Число рождения
+												</label>
+												<input type="number" name="data" required="" class="order__input form__field"
+													placeholder=" DD">
+											</div>
+											<div class="main__check q">
+												<div class="main__el">
+													<input class="form-check-input custom-checkbox" type="radio" name="gender"
+														id="form1" value="Ж" checked>
+													<label class="form-check-label" for="form1">
+														Ж
+													</label>
+												</div>
+												<div class="main__el">
+													<input class="form-check-input custom-checkbox" type="radio" name="gender"
+														id="form2" value="М">
+													<label class="form-check-label" for="form2">
+														М
+													</label>
+												</div>
+											</div>
+										</div>
+										<button class="main__button btn" data-submit>
+											Узнать
+										</button>
+									</form>
+								</div>
+								<div class="tabs__pane">
+									<form action="main2.html" class="main__form ss main__form_2 js-form" id="form2" method="get">
+										<div class="main__item">
+											<label>Партнёр 1</label>
+											<input type="number" name="partner1" required placeholder="DD. MM. YYYY"
+												class="order__input form__field">
+										</div>
+										<div class="main__item">
+											<label>Партнёр 2</label>
+											<input type="number" name="partner2" required placeholder="DD. MM. YYYY"
+												class="order__input form__field">
+										</div>
+										<button type="submit" class="main__button btn" data-submit>
+											Узнать цель союза
+										</button>
+									</form>
+								</div>
+								<div class="tabs__pane">
+									<form action="main33.html" class="main__form ss main__form_3 js-form" id="form3"
+										method="get">
+										<div class="main__item">
+											<label>
+												Имя
+											</label>
+											<input type="text" name="name" required="" class="order__input form__field">
+										</div>
+										<div class="main__flex q">
+											<div class="main__item">
+												<label>
+													Дата рождения
+												</label>
+												<input type="number" name="data" required="" class="order__input form__field"
+													placeholder="DD. MM. YYYY">
+											</div>
+											<div class=" main__check q">
+												<div class="main__el">
+													<input class="form-check-input custom-checkbox" type="radio" name="gender"
+														id="forms1" value="Ж" checked>
+													<label class="form-check-label" for="forms1">
+														Ж
+													</label>
+												</div>
+												<div class="main__el">
+													<input class="form-check-input custom-checkbox" type="radio" name="gender"
+														id="forms2" value="М">
+													<label class="form-check-label" for="forms2">
+														М
+													</label>
+												</div>
+											</div>
+										</div>
+										<button class="main__button btn" data-submit>
+											Узнать
+										</button>
+									</form>
+								</div>
+								<div class="tabs__pane">
+									<form action="main4.html" class="main__form ss main__form_4 js-form" id="form4" method="get">
+										<div class="main__item">
+											<label>
+												Ежедневный индивидуальный <br>
+												прогноз
+											</label>
+											<input type="text" name="tele" required="" placeholder="Укажите Ваш telegram"
+												class="order__input form__field">
+										</div>
+										<div class="main__flex q">
+											<div class="main__item">
+												<label>
+													Дата рождения
+												</label>
+												<input type="number" name="data" required="" class="order__input form__field"
+													placeholder="DD. MM. YYYY">
+											</div>
+											<div class="main__check q">
+												<div class="main__el">
+													<input class="form-check-input custom-checkbox" type="radio" name="gender"
+														id="formm1" value="Ж" checked>
+													<label class="form-check-label" for="formm1">
+														Ж
+													</label>
+												</div>
+												<div class="main__el">
+													<input class="form-check-input custom-checkbox" type="radio" name="gender"
+														id="formm2" value="М">
+													<label class="form-check-label" for="formm2">
+														М
+													</label>
+												</div>
+											</div>
+										</div>
+										<button class="main__button btn" data-submit>
+											Узнать
+										</button>
+										<a href="#" class="main__button main__button_2 btn" target="_blank">
+											Подписка на месяц <br>
+											2500 ₸ / 409 ₽
+										</a>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer" id="footer">
+			<div class="container">
+				<div class="nav__box q">
+					<a href="main.html" class="nav__logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+					<div class="footer__flex q">
+						<ul class="nav__list q">
+							<li>
+								<a href="#">
+									Счастливое число <br>
+									на каждый день
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Совместимость
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Динамическая <br>
+									матрица судьбы
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Советы <br>
+									нумеролога
+								</a>
+							</li>
+						</ul>
+						<div class="nav__socials q">
+							<a href="https://www.instagram.com/dataro.destiny?igsh=MTFrOTc0bzNrcG83MQ==" target="_blank">
+								<img src="img/inst.svg" alt="">
+							</a>
+							<a href="https://youtube.com/@dataro-destiny?si=IsEwwJ70xllYLotr" target="_blank">
+								<img src="img/you.svg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const urlParams = new URLSearchParams(window.location.search);
+			const partner1 = urlParams.get("data");
+			const partner2 = urlParams.get("tele");
+
+			const input1 = document.querySelector('input[name="data"]');
+			const input2 = document.querySelector('input[name="tele"]');
+			const button = document.querySelector(".main__button");
+
+			if (partner1 && input1) input1.value = partner1;
+			if (partner2 && input2) input2.value = partner2;
+			if (partner1 && partner2 && button) button.classList.add("activ");
+		});
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
+	<script src="js/all.js"></script>
+	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
+	<script type="text/javascript"
+		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+</body>
+
+</html>

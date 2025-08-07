@@ -1,7 +1,9 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
 $name = htmlspecialchars($_POST["name"]);
+$name2 = htmlspecialchars($_POST["name2"]);
 $data = htmlspecialchars($_POST["data"]);
+$tele = htmlspecialchars($_POST["tele"]);
 
 
 $refferer = getenv('HTTP_REFERER');
@@ -13,7 +15,9 @@ $tema = "Новая заявка";
 $message_to_myemail = "
 <br><br>
 Имя: $name<br>
+Имя2: $name2<br>
 Телефон: $data<br>
+Телеграм: $tele<br>
 
 Источник (ссылка): $refferer
 ";

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       $(this).parents('form').submit();
     });
 
-    // Валидация
+    // Метод валидации
     $.validator.addMethod("regex", function (value, element, regexp) {
       var re = new RegExp(regexp);
       return this.optional(element) || re.test(value);
@@ -36,68 +36,107 @@ document.addEventListener("DOMContentLoaded", () => {
           name: {
             required: 'Заполните поле',
           },
-          text: {
-            required: 'Заполните поле',
-          },
           email: {
             required: 'Заполните поле',
             email: 'Неверный формат E-mail'
           }
         },
         submitHandler: function (form) {
-          $('#loader').fadeIn();
           var $form = $(form);
-          var $formId = $(form).attr('id');
+          var $formId = $form.attr('id');
+          const isMainForm1 = $form.hasClass('main__form_1');
 
-          if ($formId === 'popupResult') {
+          // Обработка main__form_1
+          if ($formId === 'popupResult' || $formId === 'form1' || isMainForm1) {
+            const currentPage = window.location.pathname;
+
             const day = parseInt($form.find('input[name="data"]').val(), 10);
             const gender = $form.find('input[name="gender"]:checked').val();
 
-            // Скрыть все сообщения
-            $('#dayMessages .day-message').hide();
-
-            // Показать нужное
-            const target = $('#dayMessages .day-message[data-day="' + day + '"][data-gender="' + gender + '"]');
-            if (target.length > 0) {
-              target.show();
-            } else {
-              alert('Пожалуйста, выберите корректное число от 1 до 31');
-              $('#loader').fadeOut();
+            if (!day || day < 1 || day > 31) {
+              alert('Пожалуйста, введите число от 1 до 31');
               return false;
             }
+
+            if (!currentPage.includes('main.html')) {
+              // Правильный редирект с параметрами и якорем в конце
+              const query = `?day=${day}&gender=${gender}#dayMessages`;
+              window.location.href = 'main.html' + query;
+              return false;
+            }
+
+            // Если уже на main.html — показываем сообщение и скроллим
+            $('#dayMessages .day-message').hide();
+            const target = $('#dayMessages .day-message[data-day="' + day + '"][data-gender="' + gender + '"]');
+
+            if (target.length > 0) {
+              target.show();
+
+              // Скролл к блоку
+              $('html, body').animate({
+                scrollTop: $('#dayMessages').offset().top - 110
+              }, 1000);
+            } else {
+              alert('Сообщение не найдено. Проверьте введённые данные.');
+            }
+
+            // Отправка AJAX
+            $.ajax({
+              type: 'POST',
+              url: $form.attr('action'),
+              data: $form.serialize(),
+            }).always(function () {
+              setTimeout(() => $('#loader').fadeOut(), 800);
+              setTimeout(() => {
+                $.arcticmodal('close');
+                $('#popup-thank').arcticmodal({});
+                $form.trigger('reset');
+              }, 1100);
+            });
+
+            return false;
           }
 
-          // Отправка формы
-          switch ($formId) {
-            case 'popupResult':
-              $.ajax({
-                type: 'POST',
-                url: $form.attr('action'),
-                data: $form.serialize(),
-              })
-                .always(function () {
-                  setTimeout(() => {
-                    $('#loader').fadeOut();
-                  }, 800);
-                  setTimeout(() => {
-                    $.arcticmodal('close');
-                    $('#popup-thank').arcticmodal({});
-                    $form.trigger('reset');
-                  }, 1100);
-                });
-              break;
+          // Обработка других форм
+          if ($formId === 'form2' || $formId === 'form3' || $formId === 'form4') {
+            return true;
           }
-          return false;
+
+          return true;
         }
       });
     }
 
+    // Инициализация валидации для всех форм
     $('.js-form').each(function () {
       valEl($(this));
     });
 
-    // Плавный скролл
-    $('[data-scroll]').on('click', function () {
+    // Функция обработки параметров при загрузке main.html
+    function handleRedirectParams() {
+      const params = new URLSearchParams(window.location.search);
+      const day = parseInt(params.get('day'), 10);
+      const gender = params.get('gender');
+
+      if (day && gender) {
+        const target = document.querySelector(`#dayMessages .day-message[data-day="${day}"][data-gender="${gender}"]`);
+        if (target) {
+          // Скрываем все сообщения и показываем нужное
+          document.querySelectorAll('#dayMessages .day-message').forEach(el => el.style.display = 'none');
+          target.style.display = 'block';
+
+          // Скроллим к блоку
+          $('html, body').animate({
+            scrollTop: $('#dayMessages').offset().top
+          }, 1000);
+        }
+      }
+    }
+
+    handleRedirectParams();
+
+    // Плавный скролл для элементов с data-scroll
+    $('[data-scroll]').on('click', function (event) {
       $('html, body').animate({
         scrollTop: $($.attr(this, 'data-scroll')).offset().top
       }, 2000);
@@ -106,39 +145,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 });
-document.addEventListener('DOMContentLoaded', function () {
-  const swiper1 = new Swiper('.swiper1', {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    pagination: {
-      el: ".swiper-pagination1",
-    },
-    navigation: {
-      nextEl: '.swiper-button-next1',
-      prevEl: '.swiper-button-prev1',
-    },
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        spaceBetween: 0,
-        loop: true,
-        slidesPerView: 1
-      },
-      767: {
-        spaceBetween: 10,
-        slidesPerView: 2
-      },
-      992: {
-        spaceBetween: 20,
-        slidesPerView: 2
-      },
-      1200: {
-        spaceBetween: 20,
-        slidesPerView: 3
-      }
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById('form2');
+  const input1 = form.querySelector('input[name="partner1"]');
+  const input2 = form.querySelector('input[name="partner2"]');
+
+  // Удаление красной рамки при вводе
+  [input1, input2].forEach(input => {
+    input.addEventListener('input', () => {
+      input.style.border = '';
+    });
   });
 
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const partner1 = input1.value.trim();
+    const partner2 = input2.value.trim();
+    let hasError = false;
+
+    // Проверка формата DD. MM. YYYY
+    const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\.\s?(0[1-9]|1[0-2])\.\s?(19|20)\d{2}$/;
+
+    // Сброс рамок
+    [input1, input2].forEach(input => {
+      input.style.border = '';
+    });
+
+    // Проверка partner1
+    if (!dateRegex.test(partner1)) {
+      input1.style.setProperty('border', '2.5px solid #ff0000', 'important');
+      hasError = true;
+    }
+
+    // Проверка partner2
+    if (!dateRegex.test(partner2)) {
+      input2.style.setProperty('border', '2.5px solid #ff0000', 'important');
+      hasError = true;
+    }
+
+    if (hasError) return;
+
+    // Если всё верно — переход на main2.html
+    const url = `main2.html?partner1=${encodeURIComponent(partner1)}&partner2=${encodeURIComponent(partner2)}`;
+    window.location.href = url;
+  });
 });
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.querySelector('.menu-btn');
@@ -174,8 +225,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('popupResult');
+  const form = document.querySelector('.main__form_1'); // ищем только нужную форму
   const messagesContainer = document.getElementById('dayMessages');
+
+  if (!form || !messagesContainer) return;
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -315,4 +368,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
+
+
+
+
 
