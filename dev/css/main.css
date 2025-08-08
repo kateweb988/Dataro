@@ -642,7 +642,8 @@ input:-moz-placeholder {
   padding-right: 10px; }
 
 .header {
-  padding-bottom: 68px; }
+  padding-bottom: 68px;
+  position: relative; }
   .header__fig1 {
     position: absolute;
     left: -295px;
@@ -673,6 +674,14 @@ input:-moz-placeholder {
     width: 100%;
     max-width: 1350px;
     margin: 0 auto; }
+  .header__gold {
+    position: absolute;
+    top: 545px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
 
 .nav {
   padding: 35px 0; }
@@ -1030,6 +1039,19 @@ input.error {
     align-items: center; }
   .footer .nav__socials {
     margin-left: 100px; }
+  .footer__links {
+    margin-top: 40px; }
+    .footer__links a {
+      display: block;
+      margin-left: auto;
+      text-align: right;
+      color: #525653;
+      width: max-content;
+      font-size: 24px; }
+      .footer__links a:hover {
+        color: #a68052; }
+      .footer__links a:first-child {
+        margin-bottom: 25px; }
 
 .day-messages {
   margin-top: 20px; }
@@ -1707,7 +1729,13 @@ input.error {
   .page .order__box .tabs__content, .order__box .tabs__content {
     max-width: 281px; }
   .main__button_2 {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .header__gold {
+    top: 421px; }
+  .footer__links a {
+    font-size: 18px; }
+  .footer__links a:first-child {
+    margin-bottom: 15px; } }
 
 @media screen and (max-width: 1199px) {
   .container {
@@ -2118,7 +2146,13 @@ input.error {
   .main__button_2 {
     font-size: 13px;
     height: 40px;
-    margin-top: 10px; } }
+    margin-top: 10px; }
+  main .day-message_3 .main__num span, .main .day-message_4 .main__num span, .main .day-message_5 .main__num span, .main .day-message_6 .main__num span, .main .day-message_7 .main__num span, .main .day-message_8 .main__num span, .main .day-message_9 .main__num span {
+    margin-left: -16px; }
+  .header__gold {
+    top: 336px; }
+  .footer__links a {
+    font-size: 14px; } }
 
 @media screen and (max-width: 767px) {
   .container {
@@ -2136,7 +2170,9 @@ input.error {
   .main .tabs__pane:nth-child(4) {
     margin-left: calc(67.1%); }
   .mat__item p {
-    font-size: 11px; } }
+    font-size: 11px; }
+  .footer__links a {
+    font-size: 12px; } }
 
 @media screen and (max-width: 576px) {
   .page .order__box .main__form, .page .order__box .tabs__content {
@@ -2452,4 +2488,10 @@ input.error {
   .header2__pdf {
     top: 20px; }
   .page .order__box .main__form, .page .order__box .tabs__content, .order__box .tabs__content .main__form, .page .order__box .tabs__content, .order__box .tabs__content {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .header__gold {
+    height: 79%;
+    top: 526px; }
+  .footer__links a {
+    text-align: center;
+    width: 100%; } }

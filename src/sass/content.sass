@@ -260,6 +260,7 @@ input:-moz-placeholder
    padding-right: 10px
 .header 
    padding-bottom: 68px
+   position: relative
    &__fig1
       position: absolute
       left: -295px
@@ -290,6 +291,14 @@ input:-moz-placeholder
       width: 100%
       max-width: 1350px
       margin: 0 auto
+   &__gold 
+      position: absolute
+      top: 545px
+      left: 0
+      z-index: -1
+      width: 100%
+      height: 100%
+      object-fit: cover
 .nav 
    padding: 35px 0
    &__logo 
@@ -646,6 +655,19 @@ input.error
       align-items: center
    .nav__socials 
       margin-left: 100px
+   &__links 
+      margin-top: 40px
+      a 
+         display: block
+         margin-left: auto
+         text-align: right 
+         color: #525653
+         width: max-content
+         font-size: 24px
+         &:hover 
+            color: $brown
+         &:first-child
+            margin-bottom: 25px
 .day-messages 
    margin-top: 20px
 .day-message 
