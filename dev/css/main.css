@@ -261,7 +261,7 @@ html * {
   scrollbar-width: thin;
   scrollbar-color: blue #a68052; }
 
-.popup__bg {
+.popup__bg, #scale-wrapper {
   scrollbar-width: thin;
   scrollbar-color: transparent transparent; }
 
@@ -295,48 +295,48 @@ html *::-webkit-scrollbar-thumb {
 
 @font-face {
   font-family: 'Gotham Pro';
-  src: url("../fonts/GothamPro.eot");
-  src: url("../fonts/GothamPro.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro.woff2") format("woff2"), url("../fonts/GothamPro.woff") format("woff"), url("../fonts/GothamPro.ttf") format("truetype"), url("../fonts/GothamPro.svg#GothamPro") format("svg");
+  src: url("/fonts/GothamPro.eot");
+  src: url("/fonts/GothamPro.eot?#iefix") format("embedded-opentype"), url("/fonts/GothamPro.woff2") format("woff2"), url("/fonts/GothamPro.woff") format("woff"), url("/fonts/GothamPro.ttf") format("truetype"), url("/fonts/GothamPro.svg#GothamPro") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'Literal';
-  src: url("../fonts/Literal-Regular.eot");
-  src: url("../fonts/Literal-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Literal-Regular.woff2") format("woff2"), url("../fonts/Literal-Regular.woff") format("woff"), url("../fonts/Literal-Regular.ttf") format("truetype"), url("../fonts/Literal-Regular.svg#Literal-Regular") format("svg");
+  src: url("/fonts/Literal-Regular.eot");
+  src: url("/fonts/Literal-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Literal-Regular.woff2") format("woff2"), url("/fonts/Literal-Regular.woff") format("woff"), url("/fonts/Literal-Regular.ttf") format("truetype"), url("/fonts/Literal-Regular.svg#Literal-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'Gotham Pro';
-  src: url("../fonts/GothamPro-Medium.eot");
-  src: url("../fonts/GothamPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Medium.woff2") format("woff2"), url("../fonts/GothamPro-Medium.woff") format("woff"), url("../fonts/GothamPro-Medium.ttf") format("truetype"), url("../fonts/GothamPro-Medium.svg#GothamPro-Medium") format("svg");
+  src: url("/fonts/GothamPro-Medium.eot");
+  src: url("/fonts/GothamPro-Medium.eot?#iefix") format("embedded-opentype"), url("/fonts/GothamPro-Medium.woff2") format("woff2"), url("/fonts/GothamPro-Medium.woff") format("woff"), url("/fonts/GothamPro-Medium.ttf") format("truetype"), url("/fonts/GothamPro-Medium.svg#GothamPro-Medium") format("svg");
   font-weight: 500;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'Gotham Pro';
-  src: url("../fonts/GothamPro-Bold.eot");
-  src: url("../fonts/GothamPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Bold.woff2") format("woff2"), url("../fonts/GothamPro-Bold.woff") format("woff"), url("../fonts/GothamPro-Bold.ttf") format("truetype"), url("../fonts/GothamPro-Bold.svg#GothamPro-Bold") format("svg");
+  src: url("/fonts/GothamPro-Bold.eot");
+  src: url("/fonts/GothamPro-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/GothamPro-Bold.woff2") format("woff2"), url("/fonts/GothamPro-Bold.woff") format("woff"), url("/fonts/GothamPro-Bold.ttf") format("truetype"), url("/fonts/GothamPro-Bold.svg#GothamPro-Bold") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'Gotham Pro';
-  src: url("../fonts/GothamPro-Black.eot");
-  src: url("../fonts/GothamPro-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Black.woff2") format("woff2"), url("../fonts/GothamPro-Black.woff") format("woff"), url("../fonts/GothamPro-Black.ttf") format("truetype"), url("../fonts/GothamPro-Black.svg#GothamPro-Black") format("svg");
+  src: url("/fonts/GothamPro-Black.eot");
+  src: url("/fonts/GothamPro-Black.eot?#iefix") format("embedded-opentype"), url("/fonts/GothamPro-Black.woff2") format("woff2"), url("/fonts/GothamPro-Black.woff") format("woff"), url("/fonts/GothamPro-Black.ttf") format("truetype"), url("/fonts/GothamPro-Black.svg#GothamPro-Black") format("svg");
   font-weight: 900;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'Gotham Pro';
-  src: url("../fonts/GothamPro-Light.eot");
-  src: url("../fonts/GothamPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Light.woff2") format("woff2"), url("../fonts/GothamPro-Light.woff") format("woff"), url("../fonts/GothamPro-Light.ttf") format("truetype"), url("../fonts/GothamPro-Light.svg#GothamPro-Light") format("svg");
+  src: url("/fonts/GothamPro-Light.eot");
+  src: url("/fonts/GothamPro-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/GothamPro-Light.woff2") format("woff2"), url("/fonts/GothamPro-Light.woff") format("woff"), url("/fonts/GothamPro-Light.ttf") format("truetype"), url("/fonts/GothamPro-Light.svg#GothamPro-Light") format("svg");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
@@ -400,7 +400,7 @@ input:-moz-placeholder {
   margin-right: 11px; }
 
 .custom-checkbox:checked + label::before {
-  background: url(../img/check2.png) no-repeat center center;
+  background: url(/img/check2.png) no-repeat center center;
   background-size: 8px; }
 
 .swiper-pagination {
@@ -511,7 +511,7 @@ input:-moz-placeholder {
   height: 5px;
   text-align: center;
   vertical-align: top;
-  background: url(../img/down-arrow.png) no-repeat !important;
+  background: url(/img/down-arrow.png) no-repeat !important;
   position: absolute;
   right: -16px;
   top: 8px; }
@@ -1753,9 +1753,9 @@ input.error {
     top: 50px;
     z-index: 11;
     overflow: hidden;
-    background: url(../img/bur1.svg) no-repeat center center; }
+    background: url(/img/bur1.svg) no-repeat center center; }
     .menu-btn.active {
-      background: url(../img/bur2.png) no-repeat center center;
+      background: url(/img/bur2.png) no-repeat center center;
       left: 39px;
       right: inherit;
       top: 25px;
@@ -2175,6 +2175,12 @@ input.error {
     font-size: 12px; } }
 
 @media screen and (max-width: 576px) {
+  html, body, .body-wrap {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; }
+  #scale-wrapper {
+    transform-origin: top left; }
   .page .order__box .main__form, .page .order__box .tabs__content {
     max-width: 100%; }
   button:active, button:focus {
