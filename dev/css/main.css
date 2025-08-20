@@ -1472,6 +1472,10 @@ input.error {
   .main__button_2:hover {
     background: #a68052 !important; }
 
+.btn, .tabs__nav a, input, .custom-checkbox + label {
+  overflow: hidden;
+  border-radius: 2.5px; }
+
 @media screen and (max-width: 1600px) {
   .info__box {
     margin-left: 0; }
