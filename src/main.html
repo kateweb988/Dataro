@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<meta name="format-detection" content="telephone=no">
 	<meta name="format-detection" content="date=no">
 	<meta name="format-detection" content="address=no">
@@ -30,7 +31,7 @@
 </head>
 
 <body>
-	<div class="body-wrap" id="scale-wrapper">
+	<div class="body-wrap">
 		<div class="menu">
 			<ul class="nav__list">
 				<li>
@@ -12052,57 +12053,6 @@
 			</div>
 		</footer>
 	</div>
-	<!-- <script>
-		function scaleForMobile() {
-			const body = document.body;
-
-			const baseWidth = 320;           // ширина, на которую изначально рассчитана верстка
-			const maxWidth = 576;            // до какой ширины масштабируем
-			const screenWidth = Math.min(window.innerWidth, maxWidth);
-
-			if (screenWidth <= maxWidth) {
-				const scale = screenWidth / baseWidth;
-				body.style.transformOrigin = 'top left';
-				body.style.transform = `scale(${scale})`;
-				body.style.width = `${baseWidth}px`;  // фиксируем базовую ширину, чтобы масштаб был верным
-			} else {
-				// сбрасываем трансформацию для планшетов и десктопов
-				body.style.transform = '';
-				body.style.width = '';
-			}
-		}
-
-		window.addEventListener('resize', scaleForMobile);
-		window.addEventListener('DOMContentLoaded', scaleForMobile);
-	</script> -->
-	<script>
-		function scaleForMobile() {
-			const wrapper = document.getElementById('scale-wrapper');
-			if (!wrapper) return;
-
-			const baseWidth = 320;      // исходная ширина верстки
-			const maxWidth = 576;       // максимальная ширина масштабирования
-			const screenWidth = Math.min(window.innerWidth, maxWidth);
-
-			if (screenWidth <= maxWidth) {
-				const scale = screenWidth / baseWidth;
-				wrapper.style.transform = `scale(${scale})`;
-				wrapper.style.width = `${baseWidth}px`;
-
-				// центрируем по горизонтали
-				const scaledWidth = baseWidth * scale;
-				wrapper.style.marginLeft = `${(screenWidth - scaledWidth) / 2}px`;
-			} else {
-				// сброс для планшетов и десктопов
-				wrapper.style.transform = '';
-				wrapper.style.width = '';
-				wrapper.style.marginLeft = '';
-			}
-		}
-
-		window.addEventListener('resize', scaleForMobile);
-		window.addEventListener('DOMContentLoaded', scaleForMobile);
-	</script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
 	<script src="js/all.js"></script>
