@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<meta name="format-detection" content="telephone=no">
 	<meta name="format-detection" content="date=no">
 	<meta name="format-detection" content="address=no">
@@ -31,7 +30,7 @@
 </head>
 
 <body>
-	<div class="body-wrap">
+	<div class="body-wrap wrapper">
 		<div class="menu">
 			<ul class="nav__list">
 				<li>
@@ -70,7 +69,7 @@
 		<div class="per">
 			<header class="header" id="header">
 				<picture>
-					<source srcset="img/fon_gold_320.jpg" media="(max-width: 576px)">
+					<source srcset="img/fon_gold_320.jpg" media="(max-width: 767px)">
 					<source srcset="img/fon_gold_768.jpg" media="(max-width: 992px)">
 					<img src="img/fon_gold_1366.jpg" alt="" class="header__gold">
 				</picture>
@@ -12059,6 +12058,40 @@
 	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
 	<script type="text/javascript"
 		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+	<style>
+		body {
+			margin: 0;
+			overflow-x: hidden;
+			/* чтобы не было горизонтального скролла */
+		}
+
+		@media (max-width: 767px) {
+			.wrapper {
+				width: 320px;
+				/* фиксированная ширина макета */
+				margin: 0 auto;
+				transform-origin: top center;
+			}
+		}
+	</style>
+	<script>
+		function scalePage() {
+			const baseWidth = 320; // ширина макета
+			const wrapper = document.querySelector('.wrapper');
+
+			if (window.innerWidth < 768) {
+				const scale = window.innerWidth / baseWidth;
+				wrapper.style.transform = `scale(${scale})`;
+				wrapper.style.transformOrigin = "top center"; // центр по горизонтали, сверху по вертикали
+			} else {
+				wrapper.style.transform = "scale(1)";
+				wrapper.style.transformOrigin = "top center";
+			}
+		}
+
+		window.addEventListener('resize', scalePage);
+		scalePage();
+	</script>
 </body>
 
 </html>

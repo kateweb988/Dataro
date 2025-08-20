@@ -30,7 +30,7 @@
 </head>
 
 <body>
-	<div class="body-wrap page">
+	<div class="body-wrap page wrapper">
 		<div class="menu">
 			<ul class="nav__list">
 				<li>
@@ -111,7 +111,7 @@
 					</div>
 				</nav>
 				<picture>
-					<source srcset="img/foto4_mob.jpg" media="(max-width: 567px)">
+					<source srcset="img/foto4_mob.jpg" media="(max-width: 767px)">
 					<img src="img/foto4.png" alt="" class="main4__bg">
 				</picture>
 				<div class="container">
@@ -556,6 +556,40 @@
 			if (partner2 && input2) input2.value = partner2;
 			if (partner1 && partner2 && button) button.classList.add("active");
 		});
+	</script>
+	<style>
+		body {
+			margin: 0;
+			overflow-x: hidden;
+			/* чтобы не было горизонтального скролла */
+		}
+
+		@media (max-width: 767px) {
+			.wrapper {
+				width: 320px;
+				/* фиксированная ширина макета */
+				margin: 0 auto;
+				transform-origin: top center;
+			}
+		}
+	</style>
+	<script>
+		function scalePage() {
+			const baseWidth = 320; // ширина макета
+			const wrapper = document.querySelector('.wrapper');
+
+			if (window.innerWidth < 768) {
+				const scale = window.innerWidth / baseWidth;
+				wrapper.style.transform = `scale(${scale})`;
+				wrapper.style.transformOrigin = "top center"; // центр по горизонтали, сверху по вертикали
+			} else {
+				wrapper.style.transform = "scale(1)";
+				wrapper.style.transformOrigin = "top center";
+			}
+		}
+
+		window.addEventListener('resize', scalePage);
+		scalePage();
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>

@@ -30,7 +30,7 @@
 </head>
 
 <body>
-	<div class="body-wrap page">
+	<div class="body-wrap page wrapper">
 		<div class="menu">
 			<ul class="nav__list">
 				<li>
@@ -166,7 +166,7 @@
 				</div>
 			</header>
 		</div>
-		<section class="area area4" id="area4">
+		<section class="area" id="area">
 			<div class="container">
 				<p class="area__name">
 					Нумерологический прогноз помогает настроиться на ритм дня, понять, когда лучше действовать, а когда —
@@ -466,6 +466,40 @@
 	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
 	<script type="text/javascript"
 		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+	<style>
+		body {
+			margin: 0;
+			overflow-x: hidden;
+			/* чтобы не было горизонтального скролла */
+		}
+
+		@media (max-width: 767px) {
+			.wrapper {
+				width: 320px;
+				/* фиксированная ширина макета */
+				margin: 0 auto;
+				transform-origin: top center;
+			}
+		}
+	</style>
+	<script>
+		function scalePage() {
+			const baseWidth = 320; // ширина макета
+			const wrapper = document.querySelector('.wrapper');
+
+			if (window.innerWidth < 768) {
+				const scale = window.innerWidth / baseWidth;
+				wrapper.style.transform = `scale(${scale})`;
+				wrapper.style.transformOrigin = "top center"; // центр по горизонтали, сверху по вертикали
+			} else {
+				wrapper.style.transform = "scale(1)";
+				wrapper.style.transformOrigin = "top center";
+			}
+		}
+
+		window.addEventListener('resize', scalePage);
+		scalePage();
+	</script>
 </body>
 
 </html>
