@@ -1035,10 +1035,6 @@ input.error {
   padding: 80px 0; }
   .footer__logo {
     width: 300px; }
-  .footer__flex {
-    align-items: center; }
-  .footer .nav__socials {
-    margin-left: 100px; }
   .footer__links {
     margin-top: 40px; }
     .footer__links a {
@@ -1624,8 +1620,6 @@ input.error {
     font-size: 20px; }
   .main__ul {
     margin-bottom: 25px; }
-  .footer .nav__socials {
-    margin-left: 68px; }
   .page h1 {
     font-size: 45px; }
   .main4__sub {
