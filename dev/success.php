@@ -4,6 +4,7 @@ $name = htmlspecialchars($_POST["name"]);
 $name2 = htmlspecialchars($_POST["name2"]);
 $data = htmlspecialchars($_POST["data"]);
 $tele = htmlspecialchars($_POST["tele"]);
+$number = htmlspecialchars($_POST["number"]);
 
 
 $refferer = getenv('HTTP_REFERER');
@@ -18,6 +19,7 @@ $message_to_myemail = "
 Имя2: $name2<br>
 Телефон: $data<br>
 Телеграм: $tele<br>
+Номер: $number<br>
 
 Источник (ссылка): $refferer
 ";

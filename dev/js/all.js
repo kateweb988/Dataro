@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if ($formId === 'popupResult' || $formId === 'form1' || isMainForm1) {
             const currentPage = window.location.pathname;
 
-            const day = parseInt($form.find('input[name="data"]').val(), 10);
+            const day = parseInt($form.find('input[name="number"]').val(), 10);
             const gender = $form.find('input[name="gender"]:checked').val();
 
             if (!day || day < 1 || day > 31) {
@@ -145,6 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById('form2');
   const input1 = form.querySelector('input[name="partner1"]');
@@ -233,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const dayInput = form.querySelector('input[name="data"]');
+    const dayInput = form.querySelector('input[name="number"]');
     const dayValue = parseInt(dayInput.value, 10);
 
     // Скрываем все сообщения

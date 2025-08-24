@@ -304,27 +304,23 @@
 					<img src="img/fig1.svg" alt="" class="header__fig1">
 					<img src="img/fig2.svg" alt="" class="header__fig2">
 					<div class="order__box">
-						<p class="header__sub_1">
-							Счастливое число на каждый день раскрывает ваши таланты <br>
-							и жизненное предназначение, направляя к гармонии и успеху. <br class="br">
-							Узнайте его — и начните путь к себе уже сегодня!
+						<p class="header__sub header__sub_1">
+							Счастливое число на каждый день раскрывает ваши таланты <br class="mob"> и жизненное
+							предназначение,
+							направляя к гармонии и успеху. Узнайте его — и начните путь <br class="mob"> к себе уже сегодня!
 						</p>
-						<p class="header__sub_1">
-							Счастливое число на каждый день раскрывает ваши таланты и жизненное предназначение,
-							направляя к гармонии и успеху. Узнайте его — и начните путь к себе уже сегодня!
-						</p>
-						<p class="header__sub_2">
+						<p class="header__sub header__sub_2">
 							Узнайте свою совместимость с партнёром — это ключ к взаимопониманию, доверию и любви. <br>
 							Откройте секреты вашего союза уже сегодня!
 						</p>
-						<p class="header__sub_3">
+						<p class="header__sub header__sub_3">
 							Рассчитай матрицу своей судьбы, вдохновись магией чисел
 							и почувствуй свою уникальность и истинное прездназначение. <br>
 							И будь счастлив.
 						</p>
-						<p class="header__sub_4">
-							Узнайте свою совместимость с партнёром — это ключ к взаимопониманию, доверию и любви. <br>
-							Откройте секреты вашего союза уже сегодня!
+						<p class="header__sub header__sub_4">
+							Советы нумеролога — ваш ключ к успешному дню. <br> Начните использовать энергию каждого дня с
+							пользой !
 						</p>
 						<div class="order__flex q">
 							<div class="tabs__nav">
@@ -358,21 +354,21 @@
 												<label>
 													Число рождения
 												</label>
-												<input type="number" name="data" required="" class="order__input form__field"
-													placeholder=" DD">
+												<input type="number" name="number" required="" class="order__input form__field"
+													placeholder="DD">
 											</div>
 											<div class="main__check q">
 												<div class="main__el">
 													<input class="form-check-input custom-checkbox" type="radio" name="gender"
-														id="form1" value="Ж" checked>
-													<label class="form-check-label" for="form1">
+														id="for1" value="Ж" checked>
+													<label class="form-check-label" for="for1">
 														Ж
 													</label>
 												</div>
 												<div class="main__el">
 													<input class="form-check-input custom-checkbox" type="radio" name="gender"
-														id="form2" value="М">
-													<label class="form-check-label" for="form2">
+														id="for2" value="М">
+													<label class="form-check-label" for="for2">
 														М
 													</label>
 												</div>
@@ -420,15 +416,15 @@
 											<div class=" main__check q">
 												<div class="main__el">
 													<input class="form-check-input custom-checkbox" type="radio" name="gender"
-														id="forms1" value="Ж" checked>
-													<label class="form-check-label" for="forms1">
+														id="fo1" value="Ж" checked>
+													<label class="form-check-label" for="fo1">
 														Ж
 													</label>
 												</div>
 												<div class="main__el">
 													<input class="form-check-input custom-checkbox" type="radio" name="gender"
-														id="forms2" value="М">
-													<label class="form-check-label" for="forms2">
+														id="fo2" value="М">
+													<label class="form-check-label" for="fo2">
 														М
 													</label>
 												</div>
@@ -460,23 +456,23 @@
 											<div class="main__check q">
 												<div class="main__el">
 													<input class="form-check-input custom-checkbox" type="radio" name="gender"
-														id="formm1" value="Ж" checked>
-													<label class="form-check-label" for="formm1">
+														id="f1" value="Ж" checked>
+													<label class="form-check-label" for="f1">
 														Ж
 													</label>
 												</div>
 												<div class="main__el">
 													<input class="form-check-input custom-checkbox" type="radio" name="gender"
-														id="formm2" value="М">
-													<label class="form-check-label" for="formm2">
+														id="f2" value="М">
+													<label class="form-check-label" for="f2">
 														М
 													</label>
 												</div>
 											</div>
 										</div>
-										<button class="main__button btn" data-submit>
+										<!-- <button class="main__button btn" data-submit>
 											Узнать
-										</button>
+										</button> -->
 										<a href="#" class="main__button main__button_2 btn" target="_blank">
 											Подписка на месяц <br>
 											2500 ₸ / 409 ₽
@@ -574,13 +570,102 @@
 		}
 	</style>
 	<script>
+		(() => {
+			// какие инпуты маскируем
+			const sel = 'input[name="partner1"], input[name="partner2"], input[name="data"]';
+
+			// приводим поля к нужной конфигурации
+			document.querySelectorAll(sel).forEach(el => {
+				el.setAttribute('type', 'text');          // важно: НЕ number!
+				el.setAttribute('inputmode', 'numeric');
+				el.setAttribute('autocomplete', 'off');
+				el.setAttribute('maxlength', '10');       // DD.MM.YYYY
+				el.setAttribute('placeholder', 'ДД.ММ.ГГГГ');
+				el.setAttribute('pattern', '^(0[1-9]|[12][0-9]|3[01])\\.(0[1-9]|1[0-2])\\.(19|20)\\d\\d$');
+			});
+
+			function formatDigits(d) {
+				d = d.replace(/\D/g, '').slice(0, 8);     // только цифры, максимум 8 (ДДММГГГГ)
+				if (d.length >= 5) return d.slice(0, 2) + '.' + d.slice(2, 4) + '.' + d.slice(4);
+				if (d.length >= 3) return d.slice(0, 2) + '.' + d.slice(2);
+				return d;
+			}
+
+			function handleInput(e) {
+				const el = e.target;
+				const oldVal = el.value;
+				const caret = el.selectionStart;
+
+				// сколько цифр было слева от каретки до форматирования
+				const leftDigitsCount = oldVal.slice(0, caret).replace(/\D/g, '').length;
+
+				const formatted = formatDigits(oldVal);
+				el.value = formatted;
+
+				// восстанавливаем каретку на ту же "позицию по цифрам"
+				let i = 0, seen = 0;
+				for (; i < formatted.length && seen < leftDigitsCount; i++) {
+					if (/\d/.test(formatted[i])) seen++;
+				}
+				el.setSelectionRange(i, i);
+			}
+
+			function beforeInput(e) {
+				// блокируем все, кроме одиночных цифр при наборе (вставку и управляющие не трогаем)
+				if (e.inputType === 'insertText' && !/^\d$/.test(e.data)) {
+					e.preventDefault();
+				}
+			}
+
+			function onBlur(e) {
+				const el = e.target;
+				const d = el.value.replace(/\D/g, '');
+				if (d.length === 8) {
+					let dd = +d.slice(0, 2);
+					let mm = +d.slice(2, 4);
+					let yyyy = +d.slice(4);
+
+					mm = Math.min(Math.max(mm, 1), 12);
+					const dim = new Date(yyyy, mm, 0).getDate(); // дней в месяце
+					dd = Math.min(Math.max(dd, 1), dim);
+
+					el.value = formatDigits(
+						String(dd).padStart(2, '0') + String(mm).padStart(2, '0') + String(yyyy)
+					);
+				} else {
+					// просто переформатируем то, что есть
+					el.value = formatDigits(d);
+				}
+			}
+
+			// делегирование событий
+			document.addEventListener('beforeinput', e => {
+				if (e.target.matches(sel)) beforeInput(e);
+			}, true);
+
+			document.addEventListener('input', e => {
+				if (e.target.matches(sel)) handleInput(e);
+			}, true);
+
+			document.addEventListener('blur', e => {
+				if (e.target.matches(sel)) onBlur(e);
+			}, true);
+		})();
+	</script>
+	<script>
 		function scalePage() {
 			const baseWidth = 320; // ширина макета
 			const wrapper = document.querySelector('.wrapper');
 
+			if (!wrapper) return; // если .wrapper нет на странице
+
 			if (window.innerWidth < 768) {
-				const scale = window.innerWidth / baseWidth;
-				wrapper.style.transform = `scale(${scale})`;
+				let scale = window.innerWidth / baseWidth;
+
+				// округляем до 2 знаков, чтобы не было запятых
+				scale = parseFloat(scale.toFixed(2));
+
+				wrapper.style.transform = "scale(" + scale + ")";
 				wrapper.style.transformOrigin = "top center"; // центр по горизонтали, сверху по вертикали
 			} else {
 				wrapper.style.transform = "scale(1)";
@@ -589,7 +674,7 @@
 		}
 
 		window.addEventListener('resize', scalePage);
-		scalePage();
+		window.addEventListener('load', scalePage);
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
