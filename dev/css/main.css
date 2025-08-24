@@ -2874,4 +2874,6 @@ input.error {
   .area4 .main__form_5 .main__item {
     margin-bottom: 13px; }
   .area4 .main__form_5 .main__flex {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .main__form_4 .main__flex .main__item, .main__form_3 .main__flex .main__item {
+    margin-bottom: 0 !important; } }
